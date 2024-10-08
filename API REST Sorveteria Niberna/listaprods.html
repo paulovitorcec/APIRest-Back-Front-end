@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Niberna Sorvetes - Produtos</title>
+    <style>
+        body {
+            background-color: #a8d4c5; 
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse; 
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            text-align: left; 
+        }
+        
+        th {
+            background-color: #f4f4f4;
+        }
+        td {
+            background-color: #fff;
+        }
+        .button {
+            padding: 5px 10px;
+            margin: 2px; 
+            cursor: pointer;
+            border: none; 
+            color: #fff; 
+        }
+        .edit-button {
+            background-color: #4CAF50; 
+        }
+        .delete-button {
+            background-color: #f44336; 
+        }
+        #produto-form { 
+margin-top: 40px; 
+}
+    </style>
+</head>
+<body>
+    <img src="imagens/logo_niberna.jpeg" alt="Logo da Niberna Sorvetes" style="width: 200px; height:auto;">
+
+    <form id="produto-form">
+        <input type="text" id="nome" placeholder="Nome do Produto" required>
+        <input type="number" id="preco" placeholder="Preço" required step="0.01" min="0">
+        <button type="submit">Adicionar Produto</button>
+    </form>
+
+    <table id="produtos-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="produtos-list"></tbody>
+    </table>
+
+    <script src="scriptl.js"></script>
+</body>
+</html>
